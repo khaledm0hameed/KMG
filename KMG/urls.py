@@ -17,9 +17,11 @@ from home import urls
 from shop import urls
 from django.contrib import admin
 from django.urls import path, include
-
+from contact import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
     path('shop/',include('shop.urls')),
+    path('contact/',include('contact.urls'))
+    
 ]
