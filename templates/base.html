@@ -35,12 +35,12 @@
             <div class="d-flex">
                 <ul class="nav_bar flex-grow-1">
                     <li class="withsubs">
-                        <a href="">Home</a>
+                        <a href="{% url 'index'%}">Home</a>
                     </li>
                     <li class="withsubs">
-                        <a href="shop/">Shop</a>
+                        <a href="{%url 'shop'%}">Shop</a>
                     </li>
-                    <li><a href="contact/">contact</a></li>
+                    <li><a href="{% url 'contact' %}">contact</a></li>
     </nav>
         <footer class="colored">
             <div class="container">
@@ -103,3 +103,7 @@
                 </div>
             </div>
         </footer>
+
+
+{%block contact%}
+{%endblock contact%}

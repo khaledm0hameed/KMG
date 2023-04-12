@@ -1,3 +1,7 @@
+
+
+
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
@@ -26,27 +30,18 @@
 
 <body>
 
-    <!-- Preloader -->
- 
-   
-  
     <nav class="d-none d-lg-block home-3">
         <div class="container">
             <div class="d-flex">
                 <ul class="nav_bar flex-grow-1">
                     <li class="withsubs">
-                        <a href="">Home <span><i class="las la-angle-down"></i></span></a>
-                    
+                        <a href="{% url 'index'%}">Home</a>
                     </li>
                     <li class="withsubs">
-                        <a href="shop/">Shop <span><i class="las la-angle-down"></i></span></a>
-                       
+                        <a href="{%url 'shop'%}">Shop</a>
                     </li>
-                    
-                    <li><a href="contact">contact</a></li>
-                   
+                    <li><a href="{% url 'contact' %}">contact</a></li>
     </nav>
-
 
     <!-- hero area -->
     <div class="container-lg home_2_hero_wrp home-3">
@@ -282,12 +277,6 @@
         </div>
     </div>
 
-   
-
-   
-  
-
-   
 
     <!-- footer area -->
     <footer class="colored">
@@ -340,9 +329,9 @@
                             </div>
                             <div class="footer_social col-lg-6 col-lg-12">
                                 <div class="footer_icon d-flex">
-                                    <a href="{% url 'index' %}" class="facebook"><i class="lab la-facebook-f"></i></a>
-                                    <a href="{%url 'shop'%}" class="twitter"><i class="lab la-twitter"></i></a>
-                                    <a href="{%url 'contact'%}" class="instagram"><i class="lab la-instagram"></i></a>
+                                    <a href="" class="facebook"><i class="lab la-facebook-f"></i></a>
+                                    <a href="" class="twitter"><i class="lab la-twitter"></i></a>
+                                    <a href="" class="instagram"><i class="lab la-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -362,7 +351,9 @@
     <script src="{% static 'js/slick.min.js' %}"></script>
     <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
     <script src="{% static 'js/app.js' %}"></script>
-    
+   
+
 </body>
 
 </html>
+
