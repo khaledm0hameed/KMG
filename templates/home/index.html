@@ -40,7 +40,17 @@
                     <li class="withsubs">
                         <a href="{%url 'shop'%}">Shop</a>
                     </li>
-                    <li><a href="{% url 'contact' %}">contact</a></li>
+                    <li class="withsubs">
+                        <a href="{% url 'contact' %}">contact</a>
+                    </li>
+                    
+                    <li class="withsubs"> 
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="withsubs">
+                        <a href="{% url 'register' %}">register</a>
+                    </li>    
+                </ul>    
     </nav>
 
     <!-- hero area -->

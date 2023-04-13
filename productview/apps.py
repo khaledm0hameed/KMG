@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RegestarConfig(AppConfig):
+class ProductviewConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'regestar'
+    name = 'productview'

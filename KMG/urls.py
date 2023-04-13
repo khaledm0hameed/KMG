@@ -15,6 +15,13 @@ Including another URLconf
 """
 from home import urls
 from shop import urls
+from cart import urls
+from login import urls
+from myaccount import urls
+from register import urls
+from orderdetail import urls
+from payment import urls
+from productview import urls
 from django.contrib import admin
 from django.urls import path, include
 from contact import urls
@@ -22,6 +29,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
     path('shop/',include('shop.urls')),
-    path('contact/',include('contact.urls'))
+    path('contact/',include('contact.urls')),
+    path('login/',include('login.urls')),
+    #path('myaccount/',include('myaccount.urls')),
+    path('register/',include('register.urls')),
+    #path('cart',include('cart.urls')),
+    #path('orderdetail/',include('orderdetail.urls')),
+    #path('payment',include('payment.urls')),
     
 ]
