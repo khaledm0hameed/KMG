@@ -30,6 +30,12 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
+    'payment.apps.PaymentConfig',
+    'cart.apps.CartConfig',
+    'login.apps.LoginConfig',
+    'myaccount.apps.MyaccountConfig',
+    'regestar.apps.RegestarConfig',
+    'orderdetail.apps.OrderdetailConfig',
     'contact.apps.ContactConfig',
     'shop.apps.ShopConfig',
     'home.apps.HomeConfig',
