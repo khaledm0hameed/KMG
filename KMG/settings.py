@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
-    'productview.apps.ProductviewConfig',
+   
     'payment.apps.PaymentConfig',
     'cart.apps.CartConfig',
     'login.apps.LoginConfig',
