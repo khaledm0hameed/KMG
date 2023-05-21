@@ -21,7 +21,6 @@ from myaccount import urls
 from register import urls
 from orderdetail import urls
 from payment import urls
-from productview import urls
 from django.contrib import admin
 from django.urls import path, include
 from contact import urls
