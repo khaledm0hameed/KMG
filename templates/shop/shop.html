@@ -2,32 +2,13 @@
 {%load static%}
 {%block content%}
 
-    
-{% for i in pro%}
-   <!-- shop grid view -->
-<div class="shop_wrap section_padding_b">
+<div class="shop_wrap section_paddingb">
     <div class="container">
-                <div class="shop_products">
-                    <div class="row gy-4">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>{{i.name}}</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">{{i.price}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% for i in pro%}
+            <img src="{{i.imge.url}}">
+            <h1>{{i.name}}</h1>
+             
+        {%endfor%}
     </div>
-</div>                      
-{%endfor%}
+</div>    
 {%endblock content%}
