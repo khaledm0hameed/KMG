@@ -1,239 +1,33 @@
-
 {% extends 'base.html' %}
 {%load static%}
 {%block content%}
 
     
-
+{% for i in pro%}
    <!-- shop grid view -->
-   <div class="shop_wrap section_padding_b">
+<div class="shop_wrap section_padding_b">
     <div class="container">
-       
                 <div class="shop_products">
                     <div class="row gy-4">
                         <div class="col-md-4 col-sm-6">
                             <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/laptop-3.png' %}" alt="product">
-                                    <span class="tag">Hot</span>
-                                </div>
                                 <div class="sna_content">
                                     <a href="product-view.html">
-                                        <h4>HP Pavilion 15</h4>
+                                        <h4>{{i.name}}</h4>
                                     </a>
                                     <div class="ratprice">
                                         <div class="price">
-                                            <span class="org_price">$45.00</span>
+                                            <span class="org_price">{{i.price}}</span>
                                         </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/shoes-5.png' %}" alt="product">
-                                 
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>Men Casual Shoes</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                            
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="product_adcart">
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/headphone-3.png' %}" alt="product">
-                                 
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>COWIN E7 Active</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                          
-                                        </div>
-                                       
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/phone-1.png' %}" alt="product">
-                                  
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>Xiaomi Note 7 Pro</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                          
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="product_adcart">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/phone-1.png' %}" alt="product">
-                                  
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>iPhone 11 Pro</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                         
-                                        </div>
-                                        <div class="rating">
-                                       
-                                        </div>
-                                    </div>
-                                    <div class="product_adcart">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/laptop-2.png' %}" alt="product">
-                                    <div class="prodcut_hovcont">
-                                    
-                                    </div>
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>HP Omen 13</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                           
-                                        </div>
-                                        <div class="rating">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="product_adcart">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/shoes-4.png' %}" alt="product">
-                                
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>Women high Shoes</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                          
-                                        </div>
-                                        <div class="rating">
-                                          
-                                        </div>
-                                    </div>
-                                    <div class="product_adcart">
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/headphone-2.png' %}" alt="product">
-                                 
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>Bose Headphone</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                           
-                                        </div>
-                                        <div class="rating">
-                                           
-                                        </div>
-                                    </div>
-                                    <div class="product_adcart">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single_new_arrive">
-                                <div class="sna_img">
-                                    <img loading="lazy" class="prd_img" src="{% static 'images/phone-1.png' %}" alt="product">
-                                    <div class="prodcut_hovcont">
-                                     
-                                    </div>
-                                </div>
-                                <div class="sna_content">
-                                    <a href="product-view.html">
-                                        <h4>iPhone 12 Pro XR</h4>
-                                    </a>
-                                    <div class="ratprice">
-                                        <div class="price">
-                                            <span class="org_price">$45.00</span>
-                                            
-                                        </div>
-                                        <div class="rating">
-                                           
-                                        </div>
-                                    </div>
-                                    <div class="product_adcart">
-                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-    <!--                    -->
-
+</div>                      
+{%endfor%}
 {%endblock content%}
