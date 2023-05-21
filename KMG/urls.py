@@ -38,4 +38,4 @@ urlpatterns = [
     #path('orderdetail/',include('orderdetail.urls')),
     #path('payment',include('payment.urls')),
     
-] + static(settings.MEDIA_URL,document_ROOT=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
