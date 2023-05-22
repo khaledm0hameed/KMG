@@ -4,7 +4,51 @@
 
 
 {% for i in pro%}
-
+<div class="shop_wrap section_padding_b">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="shop_products">
+                    <div class="list_view_products">
+                        <div class="single_list_product">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="list_product_img">
+                                        <div class="lp_img">
+                                            <a href="product-view.html">
+                                                <img loading="lazy"  src="{{i.imge.url}}" alt="product">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="product_content">
+                                        <a href="product-view.html">
+                                            <h5>{{i.name}}</h5>
+                                        </a>
+                                        <div class="ratprice">
+                                            <div class="price">
+                                                <span class="org_price">{{i.price}}</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <p class="product_list_desc">
+                                           {{i.description}}
+                                        </p>
+                                        <div class="product_list_btns">
+                                            <button class="list_product_btn"><span class="icon"><i class="icon-cart"></i></span> Add to Cart</button>
+                                            <button class="list_product_btn wish"><span class="icon"><i class="icon-heart"></i></span> Wishlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>                      
+</div>  
 {%endfor%}
  
 {%endblock content%}
