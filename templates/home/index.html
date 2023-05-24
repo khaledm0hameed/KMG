@@ -112,129 +112,20 @@
     <div class="category_2 section_padding_b">
         <div class="container">
             <h2 class="section_title_3">Categories</h2>
-            <div class="row gy-4">
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/shoes-5.png' %}" alt="">
+            {%for i in cat%}
+                <div class="row gy-4">
+                    <div class="col-xl-2 col-md-3 col-sm-4 col-6">
+                        <a href="">
+                            <div class="single_category_2">
+                                <div class="cat2_img">
+                                    <img loading="lazy" src="{{i.imge.url}}" alt="">
+                                </div>
+                                <h5>{{i.name}}</h5>
                             </div>
-                            <h5>Shoes</h5>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/phone-1.png' %}" alt="category">
-                            </div>
-                            <h5>Mobile</h5>
-                        </div>
-                    </a>
-                </div>
-               
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/laptop-3.png' %}" alt="category">
-                            </div>
-                            <h5>Laptop</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/aircondition.png' %}" alt="category">
-                            </div>
-                            <h5>Air Conditioner</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/shirt-2.png' %}" alt="category">
-                            </div>
-                            <h5>Clothing</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy"  src="{% static 'images/headphone-3.png' %}" alt="category">
-                            </div>
-                            <h5>Headphone</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy"  src="{% static 'images/sofa-1.png' %}" alt="category">
-                            </div>
-                            <h5>Furnitures</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy"  src="{% static 'images/electronic.png' %}" alt="category">
-                            </div>
-                            <h5>Electronics</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/table.png' %}" alt="category">
-                            </div>
-                            <h5>Office</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/camera.png' %}" alt="category">
-                            </div>
-                            <h5>Camera</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy"  src="{% static 'images/baby.png' %}" alt="category">
-                            </div>
-                            <h5>Kids</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="">
-                        <div class="single_category_2">
-                            <div class="cat2_img">
-                                <img loading="lazy" src="{% static 'images/microphone.png' %}" alt="category">
-                            </div>
-                            <h5>Microphone</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            {%endfor%}
         </div>
     </div>
 
