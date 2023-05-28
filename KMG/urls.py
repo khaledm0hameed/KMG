@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from home import urls
-from shop import urls
+
 from cart import urls
 from login import urls
 from myaccount import urls
@@ -29,7 +29,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
-    path('shop/',include('shop.urls')),
+
     path('contact/',include('contact.urls')),
     path('login/',include('login.urls')),
     #path('myaccount/',include('myaccount.urls')),

@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'orderdetail.apps.OrderdetailConfig',
     'contact.apps.ContactConfig',
-    'shop.apps.ShopConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
