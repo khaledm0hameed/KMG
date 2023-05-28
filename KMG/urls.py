@@ -24,18 +24,14 @@ from payment import urls
 from django.contrib import admin
 from django.urls import path, include
 from contact import urls
+from Shop import urls
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
-
+    path('shop/',include('Shop.urls')),
     path('contact/',include('contact.urls')),
     path('login/',include('login.urls')),
-    #path('myaccount/',include('myaccount.urls')),
     path('register/',include('register.urls')),
-    #path('cart',include('cart.urls')),
-    #path('orderdetail/',include('orderdetail.urls')),
-    #path('payment',include('payment.urls')),
-    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
