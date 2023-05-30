@@ -2,45 +2,38 @@
 {%load static%}
 {%block content%}
 
-    
+<form method=post> 
+    {% csrf_token %}
     <div class="register_wrap section_padding_b">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-5 col-lg-7 col-md-9">
                     <div class="register_form padding_default shadow_sm">
                         <h4 class="title_2">Create an account</h4>
-                        <p class="mb-4 text_md">Register here if you are a new customer.</p>
                         <form action="">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="single_billing_inp">
                                         <label>Full Name <span>*</span></label>
-                                        <input type="text" placeholder="Jone Doe">
+                                        <input type="text" name='name' placeholder="Mohamed">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="single_billing_inp">
                                         <label>Email Address <span>*</span></label>
-                                        <input type="email" placeholder="example@mail.com">
+                                        <input type="email"  name = 'email' placeholder="example@mail.com">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="single_billing_inp">
                                         <label>Password <span>*</span></label>
-                                        <input type="password" placeholder="type password">
+                                        <input type="password" name='password' placeholder="type password">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="single_billing_inp">
                                         <label>Confirm Password <span>*</span></label>
-                                        <input type="password" placeholder="confirm your password">
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-2">
-                                    <div class="custom_check check_2 d-flex align-items-center">
-                                        <input type="checkbox" class="check_inp" hidden id="save-default">
-                                        <label for="save-default">I have read and agree to the <a href="terms-condition.html"
-                                                class="text-color">terms & conditions</a> </label>
+                                        <input type="password" name = 'password2' placeholder="confirm your password">
                                     </div>
                                 </div>
                                 <div class="col-12 mt-3">
@@ -64,11 +57,14 @@
                             </button>
                         </div>
 
-                        <p class="text-center mt-3 mb-0">Already have an account.? <a href="{%url 'login'%}" class="text-color">Login Now</a></p>
+                        <p class="text-center mt-3 mb-0">Already have an account.? <a href="{%url 'signin'%}" class="text-color">Login Now</a></p>
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</form> 
+
+
 {%endblock content%}

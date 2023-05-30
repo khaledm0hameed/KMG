@@ -28,6 +28,7 @@
 
     <nav class="d-none d-lg-block home-3">
         <div class="container">
+            <div class='row'>
             <div class="d-flex">
                 <ul class="nav_bar flex-grow-1">
                     <li class="withsubs">
@@ -39,14 +40,19 @@
                     <li class="withsubs">
                         <a href="{% url 'contact' %}">contact</a>
                     </li>
+                    </li>
+                    <li class="withsubs">
+                        <a href="{% url 'signup' %}">Sign_UP</a>
+                    </li>
+                    </li>
+                    <li class="withsubs">
+                        <a href="{% url 'signin' %}">Sign_IN</a>
+                    </li>
 
-                    <li class="withsubs">
-                        <a href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li class="withsubs">
-                        <a href="{% url 'register' %}">register</a>
-                    </li>
                 </ul>
+               
+            </div>
+        </div>        
            
     </nav>
 

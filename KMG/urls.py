@@ -15,25 +15,19 @@ Including another URLconf
 """
 from home import urls
 from Shop import views 
-from cart import urls
-from login import urls
-from myaccount import urls
-from register import urls
-from orderdetail import urls
-from payment import urls
 from django.contrib import admin
 from django.urls import path, include
 from contact import urls
 from Shop import urls
 from django.conf import settings
 from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('home.urls')),
-    path('shop/',include('Shop.urls')),
-    path('contact/',include('contact.urls')),
-    path('login/',include('login.urls')),
-    path('register/',include('register.urls')),
+    path('',include('home.urls'),name='home'),
+    path('shop/',include('Shop.urls'),name='shop'),
+    path('contact/',include('contact.urls'),name='contact'),
+   
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -34,12 +34,6 @@ ALLOWED_HOSTS = []
 # Application definition
 INSTALLED_APPS = [
     'Shop',
-    'payment.apps.PaymentConfig',
-    'cart.apps.CartConfig',
-    'login.apps.LoginConfig',
-    'myaccount.apps.MyaccountConfig',
-    'register.apps.RegisterConfig',
-    'orderdetail.apps.OrderdetailConfig',
     'contact.apps.ContactConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
