@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="#"><i class="las la-home"></i></a>
+        <a href="#">Shop</a>
+        <a href="#" class="active">{{obj.name}}</a>
+    </div>
+</div>
+
+<!-- product view -->
+<div class="product_view_wrap section_padding_b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="product_view_slider">
+                    <div class="single_viewslider">
+                        <img loading="lazy"  src="{{obj.imge.url}}" alt="product">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="product_info_wrapper">
+                    <div class="product_base_info">
+                        <h1>{{obj.name}}</h1>
+
+
+                        <div class="product_other_info">
+                            <p><span>Brand:</span>Bata</p>
+                            <p><span>Category:</span>{{obj.categore}}</p>
+                        </div>
+
+
+                        <div class="price mt-3 mb-3 d-flex align-items-center">
+                            <span class="org_price ms-2">{{obj.price}}</span>
+                        </div>
+                        <div class="pd_dtails">
+                            <p>
+                                {{obj.description}}
+                            </p>
+                        </div>
+
+
+                 
+                        <div class="cart_qnty ms-md-auto">
+                            <p>Quantity</p>
+                            <div class="d-flex align-items-center">
+                                <div class="cart_qnty_btn">
+                                    <i class="las la-minus"></i>
+                                </div>
+                                <div class="cart_count">4</div>
+                                <div class="cart_qnty_btn">
+                                    <i class="las la-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product_buttons">
+                        <a href="#" class="default_btn small rounded me-sm-3 me-2 px-4"><i class="icon-cart me-2"></i> Add to Cart</a>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}

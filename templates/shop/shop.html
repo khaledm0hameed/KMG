@@ -13,7 +13,6 @@
                                 <div class="col-md-4">
                                     <div class="list_product_img">
                                         <div class="lp_img">
-                                            <a href="product-view.html">
                                                 <img loading="lazy"  src="{{i.imge.url}}" alt="product">
                                             </a>
                                         </div>
@@ -21,7 +20,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="product_content">
-                                        <a href="product-view.html">
+                                        <a href="">
                                             <h5>{{i.name}}</h5>
                                         </a>
                                         <div class="ratprice">
@@ -34,7 +33,9 @@
                                            {{i.description}}
                                         </p>
                                         <div class="product_list_btns">
-                                            <button class="list_product_btn"><span class="icon"></span> Buy Now!</button>
+                                            <a href='{% url 'detail' i.id %}'>
+                                                <button class="list_product_btn"><span class="icon"></span> Detail</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

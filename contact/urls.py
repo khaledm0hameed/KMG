@@ -3,5 +3,5 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('',views.contact,name='contact'),
+    path('',views.send_massege,name='contact'),
 ]

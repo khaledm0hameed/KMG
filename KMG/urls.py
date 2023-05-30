@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from home import urls
-
+from Shop import views 
 from cart import urls
 from login import urls
 from myaccount import urls
@@ -34,4 +34,6 @@ urlpatterns = [
     path('contact/',include('contact.urls')),
     path('login/',include('login.urls')),
     path('register/',include('register.urls')),
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
