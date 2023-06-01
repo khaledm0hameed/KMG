@@ -1,8 +1,10 @@
-from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout as auth_logout
+from django.shortcuts import render, redirect
+
+
 # Create your views here.
 def index (request):
     #return HttpResponse("HOME PAGE")
@@ -31,21 +33,20 @@ def signup (request):
 
 
 def signin(request):
-    if request.method == "POST":
-        email = request.POST['email']
+    if request.method == 'POST':
+        name = request.POST['name']
         password = request.POST['password']
-
-        user = authenticate(email=email, password=password)
-
+        
+        user = authenticate(request, username=name, password=password)
+        
         if user is not None:
             login(request, user)
-            email = user.first_email
-            return render(request, 'home/index.html', {'email': email})
+            return redirect('/')  # Redirect to the home page after successful sign-in
         else:
-            messages.error(request, 'Bad creation')
-            return redirect('signup')
+            messages.error(request, 'Invalid username or password.')
     
-    return render(request, 'accounts/login.html')
+    return render(request, 'accounts/login.html')  # Render the sign-in template
+
 
 
 

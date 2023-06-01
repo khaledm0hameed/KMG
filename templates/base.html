@@ -40,7 +40,11 @@
                     <li class="withsubs">
                         <a href="{% url 'contact' %}">contact</a>
                     </li>
+
+                     <li class="withsubs">
+                        <a href="{% url 'contact' %}">Cart</a>
                     </li>
+                    
 
                     {% if user.is_authenticated %}
                         <li class="withsubs">
@@ -50,14 +54,15 @@
                         <li class="withsubs">
                             <a href="{% url 'signup' %}">Sign UP</a>
                         </li>
-                        <li class="withsubs">
-                            <a href="{% url 'signin' %}">Sign IN</a>
-                        </li>
                     {% endif %}
+
+
+                  
 
 
                 </ul>
                
+
             </div>
         </div>        
            
