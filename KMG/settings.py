@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
+    'Cart',
     'Shop',
     'contact.apps.ContactConfig',
     'home.apps.HomeConfig',

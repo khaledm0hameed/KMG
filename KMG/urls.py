@@ -21,13 +21,12 @@ from contact import urls
 from Shop import urls
 from django.conf import settings
 from django.conf.urls.static import static
-
+from Cart import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls'),name='home'),
     path('shop/',include('Shop.urls'),name='shop'),
     path('contact/',include('contact.urls'),name='contact'),
-   
+    path('cart/',include('Cart.urls'),name='cart'),
 
-
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
