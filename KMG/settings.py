@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
-    'Cart',
+    'cart',
     'Shop',
     'contact.apps.ContactConfig',
     'home.apps.HomeConfig',
@@ -68,6 +68,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processor.cart_total_amount',
+                
             ],
         },
     },
@@ -149,3 +151,8 @@ EMAIL_HOST_USER='masterkhaled33@gmail.com'
 EMAIL_HOST_PASSWORD='puyhkrieujulpcru'
 EMAIL_USE_TLS=True
 EMAIL_PORT='587'
+
+
+
+
+CART_SESSION_ID = 'cart'

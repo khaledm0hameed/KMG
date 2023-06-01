@@ -48,8 +48,10 @@
                        
 
                     </div>
+                   
                     <div class="product_buttons">
-                        <a href="#" class="default_btn small rounded me-sm-3 me-2 px-4"><i class="icon-cart me-2"></i> Add to Cart</a>
+                        <a href="{% url 'cart_add' obj.id %}">Add To Cart</a>
+                        
                     </div>
                   
                 </div>
