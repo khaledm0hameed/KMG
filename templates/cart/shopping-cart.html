@@ -1,60 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load cart_tag %}
-
-Total Length: {{ request.session.cart|length }}
-
 {% block content %}
 
-<!-- breadcrumbs -->
-<div class="container">
-    <div class="breadcrumbs">
-        <a href="index-1.html"><i class="las la-home"></i></a>
-        <a href="#" class="active">Shopping Cart</a>
-    </div>
-</div>
+                
 
-<!-- shopping cart -->
-<div class="cart_area section_padding_b">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-                <h4 class="shop_cart_title sopcart_ttl d-none d-lg-flex">
-                    <span>Product</span>
-                    <span>Total Price</span>
-                </h4>
-               {% for key, value in request.session.cart.items %}
-                <div class="shop_cart_wrap">
-                    <div class="single_shop_cart d-flex align-items-center flex-wrap">
-                        <div class="cart_img mb-4 mb-md-0">
-                            <img loading="lazy" src="{{value.image.url}}" alt="product">
-                        </div>
-                        <div class="cart_cont">
-                            <a href="product-view.html">
-                                <h5>{{ value.name }}</h5>
-                            </a>
-                            <p class="price">{{ value.price }}</p>
-                        </div>
-                        <div class="cart_price ms-auto">
-                            <p></p>
-                        </div>
-                        <div class="cart_remove ms-auto">
-                            <i class="icon-trash"></i>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
 
-            </div>
-            <div class="col-lg-3 mt-4 mt-lg-0">
-                <div class="cart_summary">
-                    <h4>Order Summary</h4>
-                    <div class="cartsum_text d-flex justify-content-between">
-                        <p class="text-semibold">Subtotal</p>
-                        <p class="text></p>
 
-                    </div>
-                </div>
-            </div>
-                        
+
 {% endblock %}
