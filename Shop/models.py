@@ -12,6 +12,7 @@ class Product(models.Model):
     iamge=models.ImageField(upload_to='photos/%y/%m/%d')
     description=models.TextField()
     categore=models.CharField(max_length=50,choices=choise,blank=True , null=True)
+    Brand=models.CharField(max_length=100,null=True)
 
     def __str__(self):
         return self.name

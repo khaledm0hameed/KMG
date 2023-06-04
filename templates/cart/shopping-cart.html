@@ -5,7 +5,11 @@
 
                 
 
-
+{% for key, value in request.session.cart.items %}
+    <img src="{{ value.imge.url }}">
+    {{ value.name }}
+    {{ value.price }}
+{% endfor %}
 
 
 {% endblock %}
