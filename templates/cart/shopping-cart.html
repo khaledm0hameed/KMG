@@ -6,10 +6,10 @@
                 
 
 {% for key, value in request.session.cart.items %}
-    <img src="{{ value.imge.url }}">
+    <img src="{{ value.iamge.url}}" alt="product iamges">
     {{ value.name }}
-    {{ value.price }}
-{% endfor %}
+    {{ value.price}}
+{%endfor%}
 
 
 {% endblock %}
