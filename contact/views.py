@@ -10,12 +10,12 @@ def send_massege(request):
         name= request.POST['name']
         email=request.POST['email']
         message=request.POST['message']
-
+        recipient_list = ['masterkhaled33@gmail.com', 'khmo492007@gmail.com', 'khaled.mohamed.tallat@gmail.com']
         send_mail(
             name,
             message,
             settings.EMAIL_HOST_USER,
-            [email],
+            recipient_list,
         )
     
     myinfo=Info.objects.first()
