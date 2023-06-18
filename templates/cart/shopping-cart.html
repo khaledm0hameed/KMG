@@ -3,10 +3,12 @@
 {% load cart_tag %}
 {% block content %}
 
-                
+         
 
 {% for key, value in request.session.cart.items %}
-    <img src="{{ value.iamge.url}}" alt="product iamges">
+    <img src="{{value.iamge.url}}" alt="product iamges">
+    
+    <P>{{value.iamge.url}}</p>
     {{ value.name }}
     {{ value.price}}
 {%endfor%}
